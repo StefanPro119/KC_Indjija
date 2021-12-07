@@ -1,0 +1,101 @@
+{% extends "cinema/layout.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+{% if movie.room_id.id == 1 %}
+
+    <div class="container" style="width: 100%; ">
+      <div class="row row-cols">
+          <h1 style="margin-top: 10px;">A</h1>
+        {% for a in A %}
+          <ul style="margin-left: -30px;">
+            <img src="{% static 'cinema/images/cinema_seat.jpg' %}" style="width: 2rem; height: 2rem; margin-left: 12px;">
+            <div style="text-align: center; margin-left: -1px;">
+                <h8 style="margin-left: 5px;">{{ a.number }}</h8>
+                <ul>
+                    <button style="border-radius:30%; background:green; width: 5px; height: 15px; margin-left: -25px;"><p style="margin-left: -5px; margin-top: -9px;">+</p></button>
+                    <button style="border-radius:30%; background:red; width: 5px; height: 15px; margin-left: 1px;"><p style="margin-left: -5px; margin-top: -9px;">-</p></button>
+                </ul>
+            </div>
+          </ul>
+          {% endfor %}
+      </div>
+    </div>
+<br>
+    <div class="container" style="width: 100%; ">
+      <div class="row row-cols">
+          <h1 style="margin-top: 10px;">B</h1>
+        {% for b in B %}
+          <ul style="margin-left: -30px;">
+            <img src="{% static 'cinema/images/cinema_seat.jpg' %}" style="width: 2rem; height: 2rem; margin-left: 12px;">
+            <div style="text-align: center; margin-left: -1px;">
+                <h8 style="margin-left: 5px;">{{ b.number }}</h8>
+                <ul>
+                    <button style="border-radius:30%; background:green; width: 5px; height: 15px; margin-left: -25px;"><p style="margin-left: -5px; margin-top: -9px;">+</p></button>
+                    <button style="border-radius:30%; background:red; width: 5px; height: 15px; margin-left: 1px;"><p style="margin-left: -5px; margin-top: -9px;">-</p></button>
+                </ul>
+            </div>
+          </ul>
+          {% endfor %}
+      </div>
+    </div>
+    {% for c in C %}
+        {{ c.id }}
+    {% endfor %}
+    <br>
+    {% for d in D %}
+        {{ d.id }}
+    {% endfor %}
+    <br>
+    {% for e in E %}
+        {{ e.id }}
+    {% endfor %}
+    <br>
+    {% for f in F %}
+        {{ f.id }}
+    {% endfor %}
+    <br>
+    {% for g in G %}
+        {{ g.id }}
+    {% endfor %}
+    <br>
+    {% for i in I %}
+        {{ i.id }}
+    {% endfor %}
+    <br>
+    {% for j in J %}
+        {{ j.id }}
+    {% endfor %}
+    <br>
+    {% for k in K %}
+        {{ k.id }}
+    {% endfor %}
+    <br>
+    {% for l in L %}
+        {{ l.id }}
+    {% endfor %}
+    <br>
+    {% for m in M %}
+        {{ m.id }}
+    {% endfor %}
+    <br>
+    {% for n in N %}
+        {{ n.id }}
+    {% endfor %}
+    <br>
+    {% for o in O %}
+        {{ o.id }}
+    {% endfor %}
+    <br>
+
+{% else %}
+    {% for p in P %}
+        {{ p.id }}
+    {% endfor %}
+{% endif %}
+
+{% endblock %}

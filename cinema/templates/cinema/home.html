@@ -6,12 +6,14 @@
 {% block content %}
 
 
+
+
 {% for movie in movies %}
      <h5 class="card-title">{{ movie.film_id.name }}</h5>
      <img src="{{ movie.film_id.picture.url }}">
      <p class="card-text"><b>About movie:</b> {{ movie.film_id.description }}</p>
      <p class="card-text"><b>Duration: </b>{{ movie.film_id.lenght_min }} min</p>
-     <button type="button" class="btn btn-primary">Book movie</button>
+     <button type="button" class="btn btn-primary"><a href="{% url 'show_movie' movie.id %}"><h5>Book movie</h5></a></button>
      <br><br><br>
 {% endfor %}
 
